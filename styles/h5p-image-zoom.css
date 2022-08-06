@@ -1,0 +1,12 @@
+/* When  */
+.h5p-transparent > div > .h5p-question.h5p-true-false > * {
+  margin-left: 3px;
+}
+// Make this width customizable from semantics parameters.
+.h5p-question-image-scalable {
+  //width: 10%!important;
+}
+
+.h5p-question-image-fill-width {
+  //max-width: 200px!important;
+}
