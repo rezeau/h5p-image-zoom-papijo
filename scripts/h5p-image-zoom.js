@@ -67,8 +67,7 @@ H5P.ImageZoomPapiJo = (function ($, Question) {
 
       // Check for task media
       var media = params.media;
-      if (media && media.type && media.type.library) {
-        media = media.type;
+      if (media && media.library) {
         var type = media.library.split(' ')[0];
         if (type === 'H5P.Image') {
           if (media.params.file) {
@@ -78,18 +77,6 @@ H5P.ImageZoomPapiJo = (function ($, Question) {
               alt: media.params.alt,
               title: media.params.title //If Hover text provided.
             });
-          }
-        }
-        else if (type === 'H5P.Video') {
-          if (media.params.sources) {
-            // Register task video
-            self.setVideo(media);
-          }
-        }
-        else if (type === 'H5P.Audio') {
-          if (media.params.files) {
-            // Register task audio
-            self.setAudio(media);
           }
         }
       }
